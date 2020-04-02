@@ -1,0 +1,21 @@
+// Main settings for project
+@import "helpers/mixins";
+@import "helpers/fonts";
+@import "helpers/base";
+
+// Import fontAwesome font
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+//Import main partials
+@import "partials/header";
+
+//Import components
+@import "components/menu";
+@import "components/about";
+@import "components/credo";
+@import "components/development";
+

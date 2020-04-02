@@ -1,0 +1,63 @@
+.credo {
+    position: relative;
+
+    &__image {
+        display: block;
+        height: 56rem;
+
+        @include breakpoint(medium down) {
+            height: 40rem;
+        }
+
+        img {
+            @include size(100%);
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        @include absolute(0, 0, 0, 0);
+        @include size(100%);
+        align-items: center;
+        background: rgba($color-1--1, 0.67);
+        color: $color-white;
+        display: flex;
+        padding: 5% 0;
+        text-align: center;
+
+        @include breakpoint(small down) {
+            background: rgba($color-1--1, 0.8);
+        }
+    }
+
+    &__title {
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 0 0 5rem;
+        text-transform: uppercase;
+
+        @include breakpoint(medium down) {
+            font-size: 4rem;
+        }
+
+        @include breakpoint(small down) {
+            font-size: 3rem;
+            margin: 0 0 2rem;
+        }
+    }
+
+    &__teaser {
+        font-size: 2.4rem;
+        line-height: 1.6;
+        margin: 0;
+
+        @include breakpoint(medium down) {
+            font-size: 2rem;
+        }
+
+        @include breakpoint(small down) {
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+// Import fonts
+$import-google-font-1: 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i,900';
+$import-google-font-2: 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800';
+
+@if variable-exists(import-google-font-1) {
+  @import url($import-google-font-1);
+}
+
+@if variable-exists(import-google-font-2) {
+  @import url($import-google-font-2);
+}
+
+// Site fonts // http://melchoyce.github.io/fontstacks/
+$typo-1: 'Roboto', 'Franklin Gothic Medium', Tahoma, sans-serif;
+$typo-2: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+
+
+//Icons font
+$font-awesome: 'Font Awesome 5 Free';
+$fa-font-path: '../fonts'

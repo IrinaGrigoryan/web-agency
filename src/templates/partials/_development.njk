@@ -1,0 +1,20 @@
+<section class="development">
+    <div class="development__title-wrap">
+        <h2 class="development__title">Разработка</h2>
+    </div>
+    <div class="container development__wrapper">
+        <ul class="development__list">
+            {% set items = [
+                ['Landing page', '10000'],
+                ['Веб-сайт', '15000'],
+                ['Интернет-магазин', '20000']
+            ] %}
+            {% for caption, price in items %}
+                <li class="development__item">
+                    <h3 class="development__caption">{{ caption }}</h3>
+                    <p class="development__price">от {{ price }} грн</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

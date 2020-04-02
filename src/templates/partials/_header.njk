@@ -1,0 +1,62 @@
+<div class="header">
+    <div class="header__banner">
+        <div class="header-image">
+            <picture class="header-image__picture">
+                <img src="../../images/top-banner.png" alt="Banner">
+            </picture>
+        </div>
+        <div class="header-info">
+            <div class="container -xs">
+                <h1 class="header-info__title">Наши сайты заставляют работать ваш бизнес</h1>
+                <p class="header-info__teaser">
+                    Большинство веб-студий считают окончанием работы загрузку
+                    сайта в интернет. Но почти никто не умеет делать проекты,
+                    которые работают и приносят прибыль.
+                </p>
+                <div class="header-numbers">
+                    <ul class="header-numbers__list">
+                        {% set textNumbers = [
+                            ['518', 'оказанных услуг'],
+                            ['345', 'проектов'],
+                            ['218', 'постоянных клиентов']
+                        ] %}
+                        {% for num, desc in textNumbers %}
+                            <li class="header-numbers__item">
+                                <p class="header-numbers__text">
+                                    <span>{{ num }}</span>
+                                    {{ desc }}
+                                </p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__nav">
+        <div class="container">
+            <div class="header-bar">
+                <nav class="header-bar__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu__list">
+                        {% set menuItems = [
+                            ['О нас', '#about'],
+                            ['Услуги', '#services'],
+                            ['Наши работы', '#portfolio'],
+                            ['Контакты', '#contacts']
+                        ] %}
+                        {% for item, link in menuItems %}
+                            <li class="menu__item"><a href="{{ link }}" class="menu__link">{{ item }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="header-fixed"></div>
+</div>
