@@ -1,3 +1,5 @@
+{% from './partials/_adaptate.njk' import contentWithImageSection with context %}
+
 {% set title = 'Главная' %}
 {% extends 'layouts/_layout.njk' %}
 
@@ -5,4 +7,18 @@
     {% include 'partials/_about.njk' %}
     {% include 'partials/_credo.njk' %}
     {% include 'partials/_development.njk' %}
+    {% include 'partials/_seo.njk' %}
+    {% include 'partials/_portfolio.njk' %}
+    {{ contentWithImageSection() }}
+    {% include 'partials/_tradein.njk' %}
+    {{ contentWithImageSection(
+title = 'Забота о каждом',
+teaser = 'Рожденный в нашей студии проект обречен
+на пожизненную поддержку. Мы обучим вас
+ведению сайта, обновим контент и настроим
+продвижение в любой момент. Каждая деталь
+вашего бизнеса является состовляющим звеном
+нашей студии. И мы позаботимся о вас.',
+image = 'care.png',
+titleBefore = 'Be careful') }}
 {% endblock %}

@@ -1,0 +1,23 @@
+{% macro contentWithImageSection(
+    title = 'Адаптивность',
+    teaser = 'Зачем ограничивать свой бизнес только
+                        пользователями стандартных компьютеров
+                        и ноутбуков? Ведь сегодня все чаще люди
+                        заходят в интернет с мобильных гаджетов.
+                        Дайте им возможность купить именно у вас,
+                        обеспечив своему сайту правильное
+                        отображение на любом виде устройства.',
+    image = 'adaptate.jpg',
+    titleBefore = 'Adaptate') %}
+    <section class="adaptate">
+        <div class="container">
+            <div class="adaptate__wrapper">
+                <div class="content">
+                    <h2 class="content__title" data-title="{{ titleBefore }}">{{ title }}</h2>
+                    <p class="content__teaser">{{ teaser }}</p>
+                </div>
+                <div class="adaptate__image"><img src="./images/{{ image }}" alt="Адаптивность"></div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}

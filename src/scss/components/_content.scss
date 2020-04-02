@@ -1,0 +1,56 @@
+.content {
+    width: 50%;
+
+    @include breakpoint(medium down) {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        color: $color-1--5;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 1rem 7.5rem 1rem 3rem;
+        position: relative;
+        text-transform: uppercase;
+
+        @include breakpoint(small down) {
+            font-size: 2.2rem;
+            padding: 1rem 5.5rem 1rem 3rem;
+        }
+
+        &::before {
+            @include absolute(0, 0, 0, 0);
+            content: attr(data-title);
+            font-size: 7.2rem;
+            letter-spacing: 2px;
+            line-height: 0.9;
+            opacity: 0.18;
+            text-transform: uppercase;
+
+            @include breakpoint(small down) {
+                font-size: 4.3rem;
+                line-height: 1.1;
+            }
+        }
+    }
+
+    &__teaser {
+        font-size: 2.4rem;
+        line-height: 1.8;
+        margin: 1.5rem 0 0;
+        padding-left: 3rem;
+
+        @include breakpoint(medium down) {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        @include breakpoint(small down) {
+            font-size: 1.6rem;
+            margin: 1rem 0 2rem;
+            padding: 0;
+        }
+    }
+}

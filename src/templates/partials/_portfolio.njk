@@ -1,0 +1,30 @@
+<section class="portfolio">
+    <h2 class="portfolio__title">
+        Последние проекты
+    </h2>
+    <div class="portfolio__wrapper">
+        <ul class="portfolio__list">
+            {% set portfolio = [
+                ['#', 'project-1', 'Название проекта 1'],
+                ['#', 'project-2', 'Название проекта 2'],
+                ['#', 'project-3', 'Название проекта 2'],
+                ['#', 'project-4', 'Название проекта 4'],
+                ['#', 'project-5', 'Название проекта 5'],
+                ['#', 'project-6', 'Название проекта 6']
+            ] %}
+            {% for link, img, name in portfolio %}
+                <li class="portfolio__item">
+                    <a href="{{ link }}" class="portfolio__item-link">
+                        <div class="portfolio__item-image">
+                            <img src="./images/{{ img }}.png" alt="{{ name }}">
+                        </div>
+                        <div class="portfolio__item-content">
+                            <p class="portfolio__item-name">{{ name }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="#" class="btn portfolio__btn">Еще больше</a>
+    </div>
+</section>

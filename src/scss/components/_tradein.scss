@@ -1,0 +1,11 @@
+.tradein {
+    background: $color-1--1 url("../../images/tradein.png") no-repeat;
+    margin: 2rem 0 10rem;
+    padding: 5rem 0 3.5rem;
+
+    &__container {
+        @include breakpoint(large) {
+            max-width: 136rem;
+        }
+    }
+}

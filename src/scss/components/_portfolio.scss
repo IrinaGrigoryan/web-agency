@@ -1,0 +1,134 @@
+.portfolio {
+    background-color: $color-1--1;
+    margin: 6rem 0 10rem;
+    padding: 3rem 0;
+    $this: &;
+
+    @include breakpoint(medium down) {
+        margin: 6rem 0;
+    }
+
+    @include breakpoint(small down) {
+        margin: 4rem 0;
+        padding: 2rem 0 3rem;
+    }
+
+    &__wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3.6rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 0 0 3rem;
+        padding: 1rem 8rem;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpoint(small down) {
+            font-size: 2.2rem;
+            margin: 0 0 2rem;
+            padding: 1rem 2rem;
+        }
+
+        &::before {
+            @include absolute(0, 0, 0, 0);
+            color: $color-white;
+            content: 'Our projects';
+            font-size: 8rem;
+            line-height: 0.8;
+            letter-spacing: 2px;
+            opacity: 0.34;
+
+            @include breakpoint(small down) {
+                font-size: 4rem;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        width: 25%;
+
+        @include breakpoint(xsmall down) {
+            width: 100%;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+            width: 50%;
+
+            @include breakpoint(xsmall down) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__item-link {
+        display: block;
+        height: 100%;
+        position: relative;
+        transition: all 250ms ease-in-out;
+
+        @include on-event() {
+            #{$this}__item-content {
+                max-height: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__item-image {
+        display: block;
+        height: 100%;
+
+        img {
+            @include size(100%);
+            display: block;
+        }
+    }
+
+    &__item-content {
+        @include absolute(null, 0, 0, 0);
+        @include size(100%);
+        align-items: center;
+        background-color: rgba($color-1--2, 0.95);
+        border: 8px solid $color-white;
+        display: flex;
+        max-height: 0;
+        opacity: 0;
+        padding: 2rem 7rem;
+        transition: all 250ms ease-in-out;
+        visibility: hidden;
+
+        @include breakpoint(small down) {
+            padding: 2rem;
+        }
+    }
+
+    &__item-name {
+        color: $color-white;
+        font-size: 4rem;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+
+        @include breakpoint(small down) {
+            font-size: 2.5rem;
+        }
+    }
+}
