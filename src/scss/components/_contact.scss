@@ -1,0 +1,182 @@
+.contact {
+    background: $color-1--1 url("../../images/contact.png") no-repeat;
+    background-size: cover;
+    margin: 10rem 0 0;
+    padding: 13rem 0 8.5rem;
+    position: relative;
+    $this: &;
+
+    @include breakpoint(medium down) {
+        margin: 6rem 0 0;
+        padding: 8rem 0 6rem;
+    }
+
+    @include breakpoint(small down) {
+        margin: 4rem 0 0;
+        padding: 4rem 0;
+    }
+
+    &::before {
+        @include absolute(0, 0, 0, 0);
+        @include size(100%);
+        background: rgba($color-1--1, 0.67);
+        content: '';
+
+        @include breakpoint(small down) {
+            background: rgba($color-1--1, 0.8);
+        }
+    }
+
+    &__container {
+        color: $color-white;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__wrapper {
+        display: flex;
+
+        @include breakpoint(small down) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        padding-right: 24rem;
+        width: 50%;
+
+        @include breakpoint(medium down) {
+            padding-right: 4rem;
+        }
+
+        @include breakpoint(small down) {
+            margin: 0 0 3rem;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin: 0 0 4rem;
+        text-transform: uppercase;
+
+        @include breakpoint(medium down) {
+            font-size: 2.8rem;
+        }
+
+        @include breakpoint(small down) {
+            font-size: 2.2rem;
+            margin: 0 0 2rem;
+        }
+    }
+
+    &__teaser {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        margin: 0;
+
+        @include breakpoint(small down) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__form {
+        width: 50%;
+
+        @include breakpoint(small down) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__fields {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__field {
+        width: 100%;
+
+        &:first-child,
+        &:nth-child(2){
+            width: 50%;
+        }
+
+        &:first-child {
+            input {
+                border-right: 0;
+            }
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: 5px solid $color-white;
+            color: $color-white;
+            font-family: $typo-1;
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+            width: 100%;
+
+            @include breakpoint(small down) {
+                font-size: 1.4rem;
+            }
+
+            &::placeholder {
+                color: $color-white;
+            }
+        }
+
+        input {
+            height: 4.5rem;
+        }
+
+        textarea {
+            height: 18rem;
+            resize: vertical;
+
+            @include breakpoint(small down) {
+                height: 12rem;
+            }
+        }
+
+        input[type="text"] {
+
+        }
+
+        input[type="email"] {
+            border-bottom: 0;
+            border-top: 0;
+        }
+    }
+
+    &__help-text {
+        display: inline-block;
+        font-size: 1.4rem;
+        margin: 1rem 4.5rem 0 2rem;
+
+        @include breakpoint(small down) {
+            margin: 1rem;
+        }
+    }
+
+    &__btn {
+        float: right;
+        font-size: 1.4rem;
+        margin: 1rem 0 0;
+
+        @include breakpoint(small down) {
+            float: none;
+        }
+    }
+}
